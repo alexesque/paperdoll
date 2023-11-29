@@ -29,7 +29,7 @@ const clothes = {
     },
     tops: {
         z: 60,
-        items: ['button-up', 'pink-jumpsuit', 'red-dress', 'torn-tank', 'yellow-blouse', 'pink-tank-top', 'blue-dress'],
+        items: ['button-up', 'pink-jumpsuit', 'red-dress', 'torn-tank', 'fern', 'pink-tank-top', 'blue-dress'],
     },
     underwear: {
         z: 10,
@@ -46,12 +46,12 @@ for (let category in clothes) {
 
             const img = document.createElement('img');
             if (['leather-jacket', 'rain-coat', 'red-gloves'].includes(item)) {
-                img.classList.add('w-24', 'five-eighths-doll-width');
+                img.classList.add('w-24', 'five-eighths-bottle-width');
             } else {
-                img.classList.add('w-20', 'half-doll-width');
+                img.classList.add('w-20', 'half-bottle-width');
             }
             img.classList.add('select-none');
-            img.src = `https://raw.githubusercontent.com/bakerkretzmar/paper-doll/master/img/${item}.png`;
+            img.src = `"/img/${item}.png`;
 
             const wrapper = document.createElement('div');
             wrapper.classList.add('w-24');
@@ -64,7 +64,7 @@ for (let category in clothes) {
         .map((el, i) => (i % 2 ? document.getElementById('clothes-area-l').appendChild(el) : document.getElementById('clothes-area-r').appendChild(el)));
 }
 
-const dollArea = document.getElementById('doll-area');
+const bottleArea = document.getElementById('bottle-area');
 
 document.querySelectorAll('[data-clothing]').forEach((item) => {
     item.ondragstart = () => false;
@@ -92,10 +92,10 @@ document.querySelectorAll('[data-clothing]').forEach((item) => {
             document.removeEventListener('mousemove', onMove);
 
             if (
-                event.clientX < dollArea.getBoundingClientRect().left ||
-                event.clientX > dollArea.getBoundingClientRect().right ||
-                event.clientY < dollArea.getBoundingClientRect().top ||
-                event.clientY > dollArea.getBoundingClientRect().bottom
+                event.clientX < bottleArea.getBoundingClientRect().left ||
+                event.clientX > bottleArea.getBoundingClientRect().right ||
+                event.clientY < bottleArea.getBoundingClientRect().top ||
+                event.clientY > bottleArea.getBoundingClientRect().bottom
             ) {
                 // If the item was dropped in the clothes area, put it away
                 item.classList.remove('active');
