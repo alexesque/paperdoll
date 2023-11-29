@@ -1,13 +1,13 @@
 {
     "private": true,
     "name": "paper-doll",
-    "author": "Jacob Baker-Kretzmar",
+    "author": "Alex Ingram",
     "license": "UNLICENSED",
     "source": "index.js",
     "main": "dist/index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/bakerkretzmar/paper-doll.git"
+        "url": "https://github.com/alexesque/paper-doll.git"
     },
     "scripts": {
         "build": "rollup --config",
