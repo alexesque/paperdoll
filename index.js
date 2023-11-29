@@ -45,13 +45,13 @@ for (let category in clothes) {
             el.style.zIndex = clothes[category].z;
 
             const img = document.createElement('img');
-            if (['leather-jacket', 'rain-coat', 'red-gloves'].includes(item)) {
+            if (['leather-jacket', 'rain-coat', 'red-gloves',].includes(item)) {
                 img.classList.add('w-24', 'five-eighths-bottle-width');
             } else {
                 img.classList.add('w-20', 'half-bottle-width');
             }
             img.classList.add('select-none');
-            img.src = `"/img/${item}.png`;
+            img.src = `https://raw.githubusercontent.com/alexesque/paperdoll/main/img/${item}.png`;
 
             const wrapper = document.createElement('div');
             wrapper.classList.add('w-24');
